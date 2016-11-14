@@ -2,8 +2,6 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 
-#define USE_SERIAL Serial
-
 const int serialBufferLength = 200;
 char serialBuffer[serialBufferLength];
 char* serialBufferPtr = serialBuffer;
@@ -11,10 +9,10 @@ bool readEndFlag = false;
 
 void setup()
 {
-	Serial.begin(115200);
+	Serial.begin(38400);
 	flushBuffer(serialBuffer,serialBufferLength,'\0');
 
-	WiFi.begin("MOV", "entotrefire");
+	WiFi.begin("tr4zsb6a", "tamdr76j");
 
 	while (WiFi.status() != WL_CONNECTED)
 	{
