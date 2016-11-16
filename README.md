@@ -6,7 +6,7 @@ Protocol
 =======
 ###From main to Wifi:
 
-    {task}(/{required_input}/)%
+    {task}(/{required_input}/)$
 
 task = int, required
 required_input = string, optional
@@ -15,11 +15,11 @@ Input required for task 1, 3 and 4.
 
 Example with input:
 
-    1/30/%
+    1/30/$
 
 Example without input:
 
-    2%
+    2$
 
 ###From Wifi to main:
     {task}/{required_output}/%
