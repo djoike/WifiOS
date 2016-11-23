@@ -28,11 +28,22 @@ void loop() {
 
 void attemptConnect()
 {
-	while (WiFi.status() != WL_CONNECTED)
+	bool isConnected = false;
+	while(!isConnected)
 	{
-		//WiFi.begin("tr4zsb6a", "tamdr76j");
-		WiFi.begin("tplink", "911340cf4f");
-		delay(500);
+		WiFi.begin("tr4zsb6a", "tamdr76j");
+		//WiFi.begin("tplink", "911340cf4f");	
+		for(int i=0; i<20; i++){
+			if(WiFi.status() == WL_CONNECTED)
+			{
+				isConnected = true;
+				break;
+			}
+			else
+			{
+				delay(500);
+			}
+		}
 	}
 }
 
